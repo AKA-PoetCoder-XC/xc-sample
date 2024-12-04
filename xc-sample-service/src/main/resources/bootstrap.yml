@@ -1,0 +1,31 @@
+# Tomcat
+server:
+  port: 8838
+  servlet:
+    context-path: /xc-sample
+
+xc:
+  nacos:
+    server-addr: 192.168.29.108:8844,192.168.29.108:8846,192.168.29.108:8848
+    namespace: local
+
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: xc-sample-service
+  profiles:
+    # 环境配置
+    active: local
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册地址
+        server-addr: ${xc.nacos.server-addr}
+        namespace: ${xc.nacos.namespace}
+      config:
+        # 配置中心地址
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        file-extension: yaml
+        group: DEFAULT_GROUP
