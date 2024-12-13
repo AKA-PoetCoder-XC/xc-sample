@@ -4,11 +4,13 @@ server:
   servlet:
     context-path: /xc-sample
 
+# nacos注册、配置地址
 xc:
   nacos:
-    server-addr: 192.168.29.108:8844,192.168.29.108:8846,192.168.29.108:8848
+    server-addr: 192.168.29.246:8844,192.168.29.246:8846,192.168.29.246:8848
     namespace: local
-
+    username: nacos
+    password: nacos
 # Spring
 spring:
   application:
@@ -23,9 +25,13 @@ spring:
         # 服务注册地址
         server-addr: ${xc.nacos.server-addr}
         namespace: ${xc.nacos.namespace}
+        username: ${xc.nacos.username}
+        password: ${xc.nacos.password}
       config:
         # 配置中心地址
         server-addr: ${spring.cloud.nacos.discovery.server-addr}
         namespace: ${spring.cloud.nacos.discovery.namespace}
+        username: ${spring.cloud.nacos.discovery.username}
+        password: ${spring.cloud.nacos.discovery.password}
         file-extension: yaml
         group: DEFAULT_GROUP

@@ -31,6 +31,8 @@ public class ApplicationConfig {
 	public static class Nacos {
 		private String serverAddr;
 		private String namespace;
+		private String username;
+		private String password;
 	}
 
 
