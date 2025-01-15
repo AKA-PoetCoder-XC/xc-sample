@@ -4,7 +4,7 @@ server:
   servlet:
     context-path: /xc-sample
 
-# nacos注册、配置地址
+# nacos注册、配置地址、账号密码
 xc:
   nacos:
     server-addr: 192.168.29.246:8844,192.168.29.246:8846,192.168.29.246:8848
