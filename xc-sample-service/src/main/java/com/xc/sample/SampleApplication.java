@@ -24,6 +24,5 @@ public class SampleApplication {
                 + "Application is running!\n"
                 + "Swagger文档: http://" + ip + ":" + port + path + "/doc.html\n"
                 + "------------------------------------------------------------");
-
     }
 }

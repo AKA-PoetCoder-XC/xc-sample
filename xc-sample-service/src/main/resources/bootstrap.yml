@@ -4,13 +4,13 @@ server:
   servlet:
     context-path: /xc-sample
 
-# nacos注册、配置地址、账号密码
+# nacos注册、配置地址、账号密码(未开启鉴权则填空字符串)
 xc:
   nacos:
-    server-addr: 192.168.29.246:8844,192.168.29.246:8846,192.168.29.246:8848
+    server-addr: 192.168.29.108:8844,192.168.29.108:8846,192.168.29.108:8848
     namespace: local
-    username: nacos
-    password: nacos
+    username: ""
+    password: ""
 # Spring
 spring:
   application:
