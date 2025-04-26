@@ -35,3 +35,6 @@ spring:
         password: ${spring.cloud.nacos.discovery.password}
         file-extension: yaml
         group: DEFAULT_GROUP
+    inetutils:
+      preferred-networks:
+        - 192.168.28.223
