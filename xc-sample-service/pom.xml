@@ -27,7 +27,7 @@
         <!-- lombok版本号 -->
         <lombok.version>1.18.30</lombok.version>
         <!-- knife4j版本号 -->
-        <knife4j.version>4.3.0</knife4j.version>
+        <knife4j.version>4.4.0</knife4j.version>
     </properties>
 
     <!-- 依赖包的版本管理 -->
