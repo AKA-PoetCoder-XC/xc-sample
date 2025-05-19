@@ -7,10 +7,10 @@ server:
 # nacos注册、配置地址、账号密码(未开启鉴权则填空字符串)
 xc:
   nacos:
-    server-addr: 192.168.29.108:8844,192.168.29.108:8846,192.168.29.108:8848
-    namespace: local_xc
-    username: ""
-    password: ""
+    server-addr: 172.26.240.140:8844,172.26.240.140:8846,172.26.240.140:8848
+    namespace: public
+    username: nacos
+    password: nacos
 # Spring
 spring:
   application:
@@ -35,6 +35,6 @@ spring:
         password: ${spring.cloud.nacos.discovery.password}
         file-extension: yaml
         group: DEFAULT_GROUP
-    inetutils:
-      preferred-networks:
-        - 192.168.28.223
+#    inetutils:
+#      preferred-networks:
+#        - 192.168.28.223
