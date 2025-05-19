@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(("/sample"))
 public class SampleController {
 
-    @GetMapping("/sample")
-    @Operation(summary = "示例接口")
+    @GetMapping("/server-info")
+    @Operation(summary = "服务基本信息")
     public String hello() {
-        return "Hello,this is sample controller";
+        return "Hello,this is xc-sample-service controller";
     }
 }
