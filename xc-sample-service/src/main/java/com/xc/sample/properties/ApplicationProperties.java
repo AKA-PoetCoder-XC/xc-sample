@@ -1,4 +1,4 @@
-package com.xc.sample.config;
+package com.xc.sample.properties;
 
 import jakarta.annotation.PostConstruct;
 import lombok.Data;
@@ -18,13 +18,13 @@ import org.springframework.context.annotation.Configuration;
 @RefreshScope
 @Configuration
 @ConfigurationProperties(prefix = "xc")
-public class ApplicationConfig {
+public class ApplicationProperties {
 
 	private Nacos nacos;
 
 	@PostConstruct
 	private void postConstruct() {
-		log.debug("工程配置 ApplicationConfig {}", this.toString());
+		log.debug("工程配置 ApplicationProperties {}", this.toString());
 	}
 
 	@Data
